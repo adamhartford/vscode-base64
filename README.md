@@ -1,11 +1,12 @@
 # vscode-base64
-## Base64 encode/decode selections 
-Commands:
+Quickly base64 encode/decode your text selections.
+
+## Commands:
 
 * **Base64 Encode** 
 * **Base64 Decode**
 
-Keybindings:
+## Keybindings:
 
 * Mac
     * **cmd+e cmd+e** Encode
