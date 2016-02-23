@@ -29,21 +29,21 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function base64Encode(e: TextEditor, d: TextDocument, sel: Selection[]) {
-	for (var x = 0; x < sel.length; x++) {
-		e.edit(function(edit) {
-			let txt: string = d.getText(new Range(sel[x].start, sel[x].end));
+    for (var i in sel) {
+        e.edit(function(edit) {
+			let txt: string = d.getText(new Range(sel[i].start, sel[i].end));
             let b: Buffer = new Buffer(txt);
-			edit.replace(sel[x], b.toString('base64'));
+			edit.replace(sel[i], b.toString('base64'));
 		});
-	}
+    }
 }
 
 function base64Decode(e: TextEditor, d: TextDocument, sel: Selection[]) {
-    for (var x = 0; x < sel.length; x++) {
+    for (var i in sel) {
 		e.edit(function(edit) {
-			let txt: string = d.getText(new Range(sel[x].start, sel[x].end));
+			let txt: string = d.getText(new Range(sel[i].start, sel[i].end));
             let b: Buffer = new Buffer(txt, 'base64');
-			edit.replace(sel[x], b.toString());
+			edit.replace(sel[i], b.toString());
 		});
 	}
 }
