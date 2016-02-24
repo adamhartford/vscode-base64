@@ -1,6 +1,8 @@
 # vscode-base64
 Quickly base64 encode/decode your text selections.
 
+![Screenshot](https://db.tt/8aS0dDm1)
+
 ## Commands:
 
 * **Base64 Encode** 
