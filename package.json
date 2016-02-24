@@ -4,6 +4,7 @@
 	"description": "Base64 encode/decode the current selections.",
 	"version": "0.0.1",
 	"publisher": "adamhartford",
+    "icon": "icon.png",
 	"engines": {
 		"vscode": "^0.10.6"
 	},
