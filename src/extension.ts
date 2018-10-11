@@ -26,6 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(encode);
+	context.subscriptions.push(decode);
 }
 
 function base64Encode(e: TextEditor, d: TextDocument, sel: Selection[]) {
