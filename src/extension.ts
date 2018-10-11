@@ -30,23 +30,23 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function base64Encode(e: TextEditor, d: TextDocument, sel: Selection[]) {
-    for (var i in sel) {
-        e.edit(function(edit) {
-			let txt: string = d.getText(new Range(sel[i].start, sel[i].end));
+	e.edit(function(edit) {
+		sel.forEach(function(s) {
+			let txt: string = d.getText(new Range(s.start, s.end));
             let b: Buffer = new Buffer(txt);
-			edit.replace(sel[i], b.toString('base64'));
+			edit.replace(s, b.toString('base64'));
 		});
-    }
+	});
 }
 
 function base64Decode(e: TextEditor, d: TextDocument, sel: Selection[]) {
-    for (var i in sel) {
-		e.edit(function(edit) {
-			let txt: string = d.getText(new Range(sel[i].start, sel[i].end));
+	e.edit(function(edit) {
+		sel.forEach(function(s) {
+			let txt: string = d.getText(new Range(s.start, s.end));
             let b: Buffer = new Buffer(txt, 'base64');
-			edit.replace(sel[i], b.toString());
+			edit.replace(s, b.toString());
 		});
-	}
+	});
 }
 
 export function deactivate() {
