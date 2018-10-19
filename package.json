@@ -4,13 +4,13 @@
 	"description": "Base64 encode/decode the current selections.",
 	"version": "0.0.1",
 	"publisher": "adamhartford",
-    "author": "Adam Hartford",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
+	"author": "Adam Hartford",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
 		"url": "https://github.com/adamhartford/vscode-base64.git"
-    },
-    "icon": "icon.png",
+	},
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^0.10.6"
 	},
@@ -19,33 +19,39 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.base64Encode",
-        "onCommand:extension.base64Decode"
+		"onCommand:extension.base64Decode"
 	],
 	"main": "./out/src/extension",
 	"contributes": {
-		"commands": [{
-			"command": "extension.base64Encode",
-			"title": "Base64 Encode"
-		}, {
-            "command": "extension.base64Decode",
-            "title": "Base64 Decode"
-        }],
-        "keybindings": [{
-            "command": "extension.base64Encode",
-            "key": "ctrl+e ctrl+e",
-            "mac": "cmd+e cmd+e",
-            "when": "editorTextFocus"
-        }, { 
-            "command": "extension.base64Decode",
-            "key": "ctrl+e ctrl+d",
-            "mac": "cmd+e cmd+d",
-            "when": "editorTextFocus"
-        } ]
+		"commands": [
+			{
+				"command": "extension.base64Encode",
+				"title": "Base64 Encode"
+			},
+			{
+				"command": "extension.base64Decode",
+				"title": "Base64 Decode"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.base64Encode",
+				"key": "ctrl+e ctrl+e",
+				"mac": "cmd+e cmd+e",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.base64Decode",
+				"key": "ctrl+e ctrl+d",
+				"mac": "cmd+e cmd+d",
+				"when": "editorTextFocus"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
 		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
+		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"devDependencies": {
 		"typescript": "^1.7.5",
