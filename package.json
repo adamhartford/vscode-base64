@@ -2,7 +2,7 @@
 	"name": "vscode-base64",
 	"displayName": "vscode-base64",
 	"description": "Base64 encode/decode the current selections.",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "adamhartford",
 	"author": "Adam Hartford",
 	"license": "MIT",
