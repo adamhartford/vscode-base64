@@ -12,7 +12,7 @@
 	},
 	"icon": "icon.png",
 	"engines": {
-		"vscode": "^0.10.6"
+		"vscode": "^1.0.0"
 	},
 	"categories": [
 		"Other"
@@ -55,7 +55,7 @@
 	},
 	"devDependencies": {
 		"typescript": "^1.7.5",
-		"vscode": "^0.11.0",
+		"vscode": "^1.0.0",
 		"cryptiles": ">=4.1.2",
 		"debug": ">=2.6.9",
 		"growl": ">=1.10.0",
